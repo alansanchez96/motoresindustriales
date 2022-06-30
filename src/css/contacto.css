@@ -1,0 +1,153 @@
+:root{
+    --negro: #000C12;
+    --blanco: #fff;
+    --naranja: #E37900;
+    --marron: #4D3E2D;
+
+    --telefono: 480px;
+    --tablet: 768px;
+    --desktop: 1024px;
+
+    --fuentePrincipal: 'Mulish', sans-serif;
+}
+body {
+    font-size: 1.6rem;
+    font-family: var(--fuentePrincipal);
+    background-color: rgb(70, 70, 70);
+    margin: auto;
+}
+
+.contenido{
+    display: flex;
+    background-color: var(--negro);
+    flex-direction: column-reverse;
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+h1, p {
+    color: var(--blanco);
+    text-align: center;
+    margin-top: 0;
+}
+h1{
+    font-size: 3rem;
+    background-color: #E37900;
+    width: 100%;
+    padding: 1rem;
+}
+p{
+    font-size: 2rem;
+    margin: 4rem 0 2rem;
+}
+
+.cuerpo-imagen{
+    margin: 0 auto;
+    text-align: center;
+}
+img {
+    max-width: 20rem;
+}
+.enlaces-redes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+a {
+    text-decoration: none;
+    color: var(--blanco);
+    transition-property: color;
+    transition-duration: .3s;
+}
+a:hover{
+    color: var(--naranja);
+    
+}
+.franja{
+    display: none;
+}
+/* Form */
+
+.campo{
+    text-align: center;
+}
+.campo:last-child{
+    margin-bottom: 4rem;
+}
+input, textarea{
+    padding: .5rem 1.3rem;
+    border-radius: 8px;
+    margin: 1rem auto;
+    border: none;
+    width: 85%;
+}
+textarea{
+    height: 15rem;
+}
+
+.btn{
+    display: block;
+    background-color: var(--naranja);
+    color: var(--blanco);
+    width: max-content;
+    padding: 1rem 1.6rem;
+    transition-property: background-color;
+    transition-duration: .3s;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: #bb6400;
+}
+
+/* desktop */
+
+
+@media (min-width: 769px) {
+    .contenido {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 100%;
+    }
+    .contacto, .ubicacion{
+        margin: 0 auto;
+    }
+    .contacto{
+        width: 100%;
+        max-width: 40rem;
+    }
+    h1{
+        background-color:unset;
+        margin: 4rem 0;
+        position: unset;
+    }
+    .franja{
+        display: block;
+        background-color: var(--naranja);
+        margin: 0 1.4rem;
+        width: 50%;
+        max-width: 15rem;
+    }
+    .franja p{
+        margin: 0;
+    }
+    .franja-text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 5rem 0;
+        text-transform: uppercase;
+    }
+    span{
+        color: var(--negro);
+        font-size: 2.6rem;
+    }
+    input, textarea{
+        width: 90%;
+        max-width: 100%;
+    }
+}
